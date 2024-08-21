@@ -7,20 +7,13 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
-    <ImageView
-        android:id="@+id/imageView"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:scaleType="centerCrop"
-        app:layout_constraintStart_toStartOf="@+id/linearLayout"
-        app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/fondopantalla" />
 
     <TextView
         android:id="@+id/textView2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="52dp"
+        android:layout_marginEnd="13dp"
         android:layout_marginBottom="54dp"
         android:text="+57 COLOMBIA"
         android:textColor="@color/black"
@@ -28,7 +21,6 @@
         app:fontFamily="@font/asset"
         app:layout_constraintBottom_toTopOf="@+id/linearLayout"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
 
@@ -72,9 +64,9 @@
         android:id="@+id/linearLayout2"
         android:layout_width="0dp"
         android:layout_height="0dp"
-        android:layout_marginBottom="1dp"
+        android:layout_marginBottom="42dp"
         android:orientation="horizontal"
-        app:layout_constraintBottom_toTopOf="@+id/linearLayout3"
+        app:layout_constraintBottom_toTopOf="@+id/linearLayout6"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/linearLayout">
@@ -107,13 +99,14 @@
     <LinearLayout
         android:id="@+id/linearLayout3"
         android:layout_width="0dp"
-        android:layout_height="0dp"
+        android:layout_height="51dp"
+        android:layout_marginTop="52dp"
         android:layout_marginBottom="40dp"
         android:orientation="horizontal"
         app:layout_constraintBottom_toTopOf="@+id/linearLayout4"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/linearLayout2">
+        app:layout_constraintTop_toTopOf="@+id/linearLayout2">
 
         <Button
             android:id="@+id/button11"
@@ -142,14 +135,16 @@
 
     <LinearLayout
         android:id="@+id/linearLayout4"
-        android:layout_width="353dp"
-        android:layout_height="0dp"
-        android:layout_marginEnd="16dp"
-        android:layout_marginBottom="340dp"
+        android:layout_width="373dp"
+        android:layout_height="47dp"
+        android:layout_marginStart="31dp"
+        android:layout_marginEnd="31dp"
+        android:layout_marginBottom="35dp"
         android:orientation="horizontal"
-        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/consejosid"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/linearLayout3">
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout6">
 
         <com.google.android.material.button.MaterialButton
             android:id="@+id/responder1"
@@ -170,10 +165,41 @@
         <Button
             android:id="@+id/button14"
             style="@style/Widget.MaterialComponents.Button.TextButton.Icon"
-            android:layout_width="wrap_content"
+            android:layout_width="122dp"
             android:layout_height="wrap_content"
             android:text="Colgar"
             app:icon="@android:drawable/stat_notify_missed_call" />
+
     </LinearLayout>
+
+
+    <LinearLayout
+        android:id="@+id/linearLayout6"
+        android:layout_width="411dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="11dp"
+        android:layout_marginBottom="12dp"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toTopOf="@+id/linearLayout4"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout2">
+
+    </LinearLayout>
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/consejosid"
+        style="@style/Widget.MaterialComponents.Button.TextButton.Icon"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="256dp"
+        android:text="Presiona Para Consejo"
+        android:textColor="@color/black"
+        android:textSize="12dp"
+        android:textStyle="bold"
+        app:icon="@android:drawable/ic_dialog_info"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout4" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
